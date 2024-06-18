@@ -24,7 +24,7 @@ app.use("/api/answer", answerquestions); //answer route middleware
 async function start() {
   try {
     const result = await dbconnection.execute("select 'test'");
-    await app.listen(port);
+    app.listen(port);
     console.log("database connection established");
     console.log(`listneing on port ${port}`);
   } catch (error) {
